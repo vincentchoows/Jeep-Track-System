@@ -1,0 +1,587 @@
+
+
+Monday 
+
+* the assigned PC was broken down on Monday 4pm (x)
+	-> progress lost for implementating the step forms. (x)
+
+
+Tuesday
+
+
+
+* chcek asset number for all hardware around the office (x)
+	-> and also the lower station  (x)
+
+
+
+Wednesday 
+
+* Ensure FIN approve flow
+	-> only allowed APPROVED status to assign card no. (x)
+	-> edit PermitApplicationObserver logic (x)
+		-> REJECT application when one file is REJECTED (x)
+		
+* Edit a rejected Application (x)
+	-> when a staff saved a 'surat_permohonan = 1' (REJECTED) (x)
+		-> system will detect and save 'status=1' and 'phc_check = 1' (REJECTED) (x)
+
+	-> customer updates '[form]'  (x)
+		-> system will save both '[form]_status = 2' and 'status = 0' (x)
+
+
+!!! 
+-> didnt account for non-rejected application (x)
+	-> assigned [role]_status as 2 (APPROVED) (x)
+	
+Thursday
+
+* Test the flow of payment (after jkr_approve) (x)
+	-> align center customer table (date_regisetered) (x)
+	-> insert new status (3 activate, 4 disabled, 5 terminated) (x)
+	
+
+
+* Isuses to be fixed 
+	-> after the custmoer update rejected applications (x)
+		-> admin can review again, but doesnt change the [form]_status to apprvoed (x)
+			-> it will return back to the customer (wrong flow) (x)
+			-> all forms shud be back to approved by default (right flow) (x)
+			
+			
+
+Friday 
+
+* Add new status (2 approved, 3 active) (x)
+	-> when finance_approve = 2 (approve), status = 3 (active) (x)
+	-> when jkr_approve = 2 (approve), status = 2 (approve, pending payment) (x)
+	==solution: remove ->saveQuietly() (x) 
+
+
+-----------------
+Overall issues
+-----------------
+
+* change log activities 
+	-> [Admin user] : [details changed] in permit application log
+	
+	
+-----------------
+Overall issues 
+-----------------
+	
+Note
+
+* unaccessed pages needs to be both 
+	-> unaccessable page 
+	-> unchangeable data 
+
+* admin panel
+	** laravel orchid
+	** filament
+
+* e-commerce 
+	** bagisto 
+	** aimeos 
+
+
+---------------------------------------------------
+
+Tuesday 
+
+
+* Normal staff can create application (x)
+	-> omit /create from all normal staff permission [GET & PUT] (x)
+	
+	
+* Application category (vendor, business owner...) (x)
+	-> add optional company name, company address in admin panel (x)
+	->added autocaps to vehicle reg-No(x)
+
+
+* Remove sortable in multipleFile (x)
+	->check and remove ->sortable feature (x)
+	
+Wednesday 
+
+* Add feature for SuperPass (instant approved Permit) (x)
+	-> for urgent instant pass (working on it)(x)
+		->issue: cannot create new form with file uploads in admin panel (solved by casting fields)(x)
+		-> increment permit_application id is just enuf (x)
+				
+
+* Add payment guard before finance_check(x)
+	-> modify to exclude create access for all roles except sysadmin and Administrator (x)
+	-> add new tab for Express permit (x)
+	-> add power button for sysadmin to approve (x)
+
+
+* Complete validation check for expresss application(x)
+	-> conditiional validation check (x)
+		-> if type is express, then express input field is required, else nullable(x)
+
+
+* Fully test workflow process untill customer payment part 1 (x)
+	-> add payment guard (x)
+	-> add page to ASSIGN CARD NO -> just open approved tab (x)
+	-> add page to see transaction receipt (x)
+		-> put in Card tab (x)
+		-> add receipt file path in transction table (x)
+		
+	
+		
+Monday 
+------
+
+
+
+
+
+Tuesday 
+-------
+
+
+
+	
+
+	
+* configure receipt filpath
+	
+* Testing the Edit page layout 
+	-> access third level model 
+
+	
+* Renewal module 
+	-> assigne End Date when status = 4
+	
+	
+* Test latest staff if they reject application 
+	-> if feedback_status = 0 (rejeted)
+
+
+* Fix infoboxes 
+	-> Administrator infoboxes 
+	
+* change the normal admin grid db query
+
+
+
+* finapprove cannot assign card 
+
+
+ic
+
+-> add status filter in Administrator grid
+
+-> change status names in grid 
+
+-> validation format
+
+
+->max 3 revision before termination
+
+->extend pass double extend
+
+->unique email registration
+
+-> unique car number
+
+
+-> reduce dupliation of permit holders
+
+
+
+Thursday
+-----
+
+
+
+
+
+
+Administrator tabs
+* Overall
+* Express 
+* Terminated 
+
+
+blue
+orange 
+green
+blue
+green
+yellow 
+red
+
+
+info
+warning
+success
+info
+success
+warning
+danger
+
+
+
+
+
+
+Monday 
+
+* Have an internal meeting on the state of development
+	-> list of amendments 
+
+* Integrate Email notifications to the rest 
+
+
+
+tuesday 
+
+* tried uploading laravel into cpanel
+	-> issue: ssh terminal is not enabled 
+
+
+
+wednesday
+--------
+
+
+* Tried deploying jeep track system to cpanel Exabyte (x)(x)
+	-> for UAT testing
+	-> issues in different folder accessing 
+	-> ssl certificate error
+	-> page styling and js not loading
+	-> database error, default value must not be '[]' due to different version comptibility 
+	-> open-admin's function methods not working on cpanel after deployment, 
+		-> permit applicaton states does change from approval stages. 
+		
+		
+		
+	
+-- Test if the approval chain is working after deployment of jeep-track system to cpanel 
+
+
+* open-admin function still not working (x)
+	-> issues with the Model Observer (x)
+	-> make changes in cpanel (x)
+* why is laravel's component styling is not working (x)
+	-> issues with the build folder (vite js) (x)
+	-> make changes in cpanel (x)
+* when permit becomes activated  (x) -> thursday
+	-> customer UI (x)
+		-> remove from application tab (x)
+		-> display in permit tab (x)
+	-> admin (x)
+		->ability to activate/disable/terminate application (x)
+
+
+* add Approval tab in Administration/sysdamin panel (x)
+	-> added (x)
+
+
+%9TG)y3P7~la
+
+
+
+vincent choo intern password
+
++WO1YiHlS2bt
+
+
+
+Thursday 
+-------
+
+* Fix the application flow WITH rejections 
+	-> test flow 
+	-> test flow with rejections
+
+* Fix file accessing path 
+
+
+
+
+
+
+
+
+
+
+Friday
+----
+
+* settle file system in cpanel laravel (x)
+	-> fixed (x)
+	-> changed filesysetm config files
+	-> manage file/folder permissionW%hYr0N))9rUthis 
+ on the linux server (e.g. 755 etc)
+	-> testrun the upload file system on the deployed sysetm on the cpanel . 
+	-> 
+	
+	
+	
+	
+* Run hardware testing at the site im situated 
+	-> run test for sond system, projecters screens, live streaming using Facebook live
+	-> accomodate for the technical issues faced during the events going on. 
+	-> ensure that sysetmn hardware is thoroughly tested without issues 
+* During the event day on Friday, Saturday 
+	-> accomodate for the technical issues faced during the events going on. 
+	-> assist in the live streaming 
+	-> help setup the hardware such as projectors, televison display, 
+	-> provide technical issues 
+	-> 
+	
+	
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||				
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+
+Monday
+------
+
+8.30 - start
+9.30 - complete weekly report 
+
+
+* fix the file url in customer view page (x)
+	-> change the config path file in the filesystem.php (x)
+
+* fix the file submission page (x)
+	-> fixed (x)
+	
+
+* using debugbar to debug errors 👍
+
+Tuesday 
+------
+
+* test the whole approval flow on cPanel
+	-> test all approve flow (x)
+	-> test rejection flow 
+		-> file rejection flow (x)
+			-> failed, check local ver (x)
+			-> update into cpanel  (permitapplicationcontroller, permitapplicationobserver, (x)
+			-> regression test (x)
+	
+		-> after fin_approve check, cannot update status = 4, (x)
+			 
+		-> feedback rejection flow 
+		
+		-> only allow rejected fields to be updated 
+	
+	
+* SIDE QUEST: 	
+	-> update status in customer permit view (x)
+	-> remove json_decode from cpanel (x)
+	-> Administrator's 
+		-> approve button / (x)
+		-> submit button / (x)
+		-> back button (x)
+			== edit in the default footer.blade.layout and construct a dynamic Back btn url using {{ admin_url(implode('/',array_slice(Request::segments(),1,1))) }} (x)
+			
+			
+			
+Wednesday
+------
+
+
+* Customer captcha - using google's captcha verifications system 
+-> able to view the statistic of activity acccross the login and registry module to prevent spams and trolls 
+	-> login captcha (x)
+	-> regiser captcha (x)
+	-> register input validations (x)
+	
+	
+* Admin panel changes 
+	-> admin side -> add email for each admin user registration (x)
+	-> add mailtrap as a testing platform 
+	
+	
+// \Barryvdh\Debugbar\Facades\Debugbar::info(Auth::user()->hasVerifiedEmail());
+
+
+
+Thursday 
+------
+
+
+* Administrator mail system (ApprovalChainMailController)
+	-> approval chain mail 
+		-> approve mail phc
+		-> approve mail jkr
+		-> approve mail fin
+	-> approval chain mail (transaction) (TransactionApprovalChainMailController)
+		
+	-> approve mail to custome as active permit (ApprovedPermitMailController)
+		-> 
+	
+
+Friday
+--------
+
+* Adding notification mail to adin user 
+
+https://docs.cpanel.net/knowledge-base/web-services/guide-to-git-set-up-access-to-private-repositories/
+
+ssh-keygen -t rsa -f ~/.ssh/testing -b 4096 -C "[email protected]"
+
+FTPP nWx2?PY$!;zn
+
+FTPP mP#Jxq@DmFpx
+
+FP&.eXfX{rDQ
+
+
+
+
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||				
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+
+Monday & Tuesday 
+---------------
+
+* Customer side 
+	-> when rejeted, send customer email notif
+
+	-> remove unrelated file to be fixed when file is rejected 
+	
+	-> add payment page apparently (using view page shud be fine) 
+	
+
+* Admin panel 
+	-> add notificaiton mail to each phase of approval flow (x)
+		-> when created (x)
+			-> phc checker (x)
+		-> when updated to =2 (x)
+			-> phc approver (x)
+			-> phc second approver (x)
+			-> jkr checker (x)
+			-> jkr approver (x)
+			
+		-> when need to payment	(to customer) (x)
+			-> before payment (x)
+			-> after payment successful  (x)
+				SIDE QUEST: customer side must trigger payment status change (x)
+		-> after payment (x)
+			-> fin checker (x)
+			-> fin approver (x)
+			
+* Add paymetn amount tab 
+	
+
+
+
+
+
+
+
+Minor changes and fixed made to the jeep track system 
+
+* fix the file url in customer view page (x) in cPanel 
+	-> change the config path file in the filesystem.php (x) with the help of Debugbar
+
+* fix the file submission page of customer-side UI in cPanel(x)
+	-> fixed (x)
+		
+* Minor changes 
+	-> update status in customer permit view (x)
+	-> remove json_decode from cpanel (x)
+	-> Administrator's 
+		-> approve button / (x)
+		-> submit button / (x)
+		-> back button (x)
+			== edit in the default footer.blade.layout and construct a dynamic Back btn url using {{ admin_url(implode('/',array_slice(Request::segments(),1,1))) }} (x)
+	
+	
+* run a regression test the whole approval flow on cPanel
+	-> test all approve flow (x)
+	-> test rejection flow 
+		-> file rejection flow (x)
+			-> failed, check local ver (x)
+			-> update into cpanel  (permitapplicationcontroller, permitapplicationobserver, (x)
+			-> regression test (x)
+	
+		-> after fin_approve check, cannot update status = 4, (x)
+			 
+	
+
+
+
+
+* Mailing system 
+
+	-> Customer  (x)
+		-> activate Laravel's customer mailing feature for  (x)
+			-> forgot password module (x)
+			-> registration email verificiaton module  (x)
+			-> approved permit process step  (x)
+		
+
+
+	-> (Attempt) * Administrator mail system (ApprovalChainMailController) (x)
+			-> approval chain mail  (x)
+				-> approve mail phc (x)
+				-> approve mail jkr (x)
+				-> approve mail fin (x)
+			-> approval chain mail (transaction) (TransactionApprovalChainMailController) (x)
+				
+			-> approve mail to custome as active permit (ApprovedPermitMailController) (x)
+				->  (x)
+		
+Wednesday 
+-----------------
+
+
+* Report weekly (x)
+
+	
+* Documentations drive
+	-> file path documentations 
+		-> customer side 
+			-> application / mypermit
+			-> permit holder 
+			-> profile 
+			-> renewal (?) 
+			
+		-> admin panel (x)
+			-> dashboard (x)
+			-> permit application ...  (x)
+			-> permit holder (x)
+			-> application category (x)
+			-> vehilce type  (x)
+			-> permit extend  (x)
+			-> renewal  (x)
+			-> vehicle  (x)
+			-> customer  (x)
+			-> transaction  (x)
+			-> permit renewal log  (x)
+			-> permit application log (x)
+			-> permit extend log (x)
+			
+			
+		-> system module (vendor folder/ Extensions)(x)
+
+
+* feedback rejection flow 
+
+
+
+Thursday 
+---------
+
+* update latest jeep track system into cPanel 
+	-> 
+
+
+
+* add carousel database 
+
+
+
+
+
