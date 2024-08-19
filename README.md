@@ -85,20 +85,20 @@ php artisan serve
 
 ### Customer Interface
 
-!()
-!()
-!()
-!()
-!()
-!()
+![text](https://github.com/vincentchoows/Jeep-Track-System/blob/main/public/github-image/image_6.png)
+![text](https://github.com/vincentchoows/Jeep-Track-System/blob/main/public/github-image/image_7.png)
+![text](https://github.com/vincentchoows/Jeep-Track-System/blob/main/public/github-image/image_8.png)
+![text](https://github.com/vincentchoows/Jeep-Track-System/blob/main/public/github-image/image_9.png)
+![text](https://github.com/vincentchoows/Jeep-Track-System/blob/main/public/github-image/image_10.png)
+![text](https://github.com/vincentchoows/Jeep-Track-System/blob/main/public/github-image/image_11.png)
 
 ### Admin Interface
 
 ![text](https://github.com/vincentchoows/Jeep-Track-System/blob/main/public/github-image/image_5.png)
-!(https://github.com/vincentchoows/Jeep-Track-System/blob/main/public/github-image/image_4.png)
-!()
-!()
-!()
+![text](https://github.com/vincentchoows/Jeep-Track-System/blob/main/public/github-image/image_4.png)
+![text](https://github.com/vincentchoows/Jeep-Track-System/blob/main/public/github-image/image_3.png)
+![text](https://github.com/vincentchoows/Jeep-Track-System/blob/main/public/github-image/image_2.png)
+![text](https://github.com/vincentchoows/Jeep-Track-System/blob/main/public/github-image/image_1.png)
 
 
 
