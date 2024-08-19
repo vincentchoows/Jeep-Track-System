@@ -1,7 +1,9 @@
 
-# Project Title
+# Jeep Track System
 
-A brief description of what this project does and who it's for
+The Jeep Track System is a web application designed to replace the manual process of managing jeep permits for off-road activities. Users can apply for permits online, track their application status, and get updates via email. The system also simplifies the work for administrators by providing tools to review, approve, or reject applications, as well as automate tasks like calculating permit fees and assigning permit numbers.
+
+The project has gone through several revisions based on feedback from stakeholders, ensuring it meets the needs of both users and administrators. While still in development, it aims to streamline the entire permit process, making it more efficient and accessible. Comprehensive documentation is provided to support future updates and maintenance.
 
 # Installation Guide
 
@@ -81,8 +83,12 @@ php artisan serve
     
 ## Demo
 
-Insert gif or link to demo
+### Customer Interface
 
+
+### Admin Interface
+
+https://github.com/vincentchoows/Jeep-Track-System/blob/main/public/github-image/image_5.png
 
 ## License
 
