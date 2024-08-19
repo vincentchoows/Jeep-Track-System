@@ -22,7 +22,8 @@ return [
     | `img` tag, eg '<img src="http://logo-url" alt="Admin logo">'.
     |
     */
-    'logo' => '/images/phc-logo.png',
+    'logo' => '',
+
 
     /*
     |--------------------------------------------------------------------------
@@ -34,7 +35,7 @@ return [
     | '<img src="http://logo-url" alt="Admin logo">'.
     |
     */
-    'logo-mini' => '<img src="http://127.0.0.1:8000/images/phc-logo.png" alt="Admin logo">',
+    'logo-mini' => '">',
 
     
     /*

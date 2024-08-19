@@ -89,13 +89,9 @@ Route::get('/complete-payment/{id}', function ($id) {
 
 
 Route::get('/', function () {
-    $carouselItems = [
-        ['title' => 'First Slide'],
-        ['title' => 'Second Slide'],
-        ['title' => 'Third Slide'],
-    ];
-    return view('components.pages.home', compact('carouselItems'));
+    return view('components.pages.home');
 })->name('/');
+
 Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');
 Route::patch('/profile', [ProfileController::class, 'update'])->name('profile.update');
 Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');

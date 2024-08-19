@@ -15,7 +15,6 @@
             <ol class="carousel-indicators">
                 <li data-target="#carouselExampleSlideScale" data-slide-to="0" class="active"></li>
                 <li data-target="#carouselExampleSlideScale" data-slide-to="1"></li>
-                <li data-target="#carouselExampleSlideScale" data-slide-to="2"></li>
             </ol>
             <div class="carousel-inner">
                 <!-- First Slide -->
@@ -23,7 +22,7 @@
                     <div class="slider-area">
                         <div class="single-slider slider-height2 d-flex align-items-center">
                             <div class="container">
-                                <div class="row align-items-center justify-content-between"
+                                <div class="row align-items-center justify-content-between ml-4 mr-4"
                                     style="padding-top:2em; padding-bottom:2em;">
                                     <div class="col-lg-7 col-md-7">
                                         <div class="watch-details mb-40">
@@ -36,39 +35,7 @@
                                     </div>
                                     <div class="col-lg-3 col-md-3 col-sm-10">
                                         <div class="choice-watch-img">
-                                            <img src="{{ asset('zone-asset/img/logo/phc-logo.png') }}" alt=""
-                                                style="height:100%; width:100%;">
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                
-
-
-
-                <!-- Second Slide -->
-                <div class="carousel-item">
-                    <div class="slider-area">
-                        <div class="single-slider slider-height2 d-flex align-items-center">
-                            <div class="container">
-                                <div class="row align-items-center justify-content-between"
-                                    style="padding-top:2em; padding-bottom:2em;">
-                                    <div class="col-lg-7 col-md-7">
-                                        <div class="watch-details mb-40">
-                                            <h2 style="font-size:4em; color:white;">{{__('Second Slide Title')}}</h2>
-                                            <p style="color:white;padding-top:1em; padding-bottom:1em;">
-                                                {{__('Second slide description goes here.')}}
-                                            </p>
-                                            <a href="#" class="btn">{{__('Learn More')}}</a>
-                                        </div>
-                                    </div>
-                                    <div class="col-lg-3 col-md-3 col-sm-10">
-                                        <div class="choice-watch-img">
-                                            <img src="{{ asset('path-to-your-image.png') }}" alt=""
+                                            <img src="{{ asset('zone-asset/img/logo/mountain-logo.jpg') }}" alt=""
                                                 style="height:100%; width:100%;">
                                         </div>
                                     </div>
@@ -84,30 +51,35 @@
                 <!-- Third Slide -->
                 <div class="carousel-item">
                     <div class="slider-area">
-                        <div class="single-slider slider-height2 d-flex align-items-center">
+                        <!--background image -->
+                        <div class="single-slider slider-height2 d-flex align-items-center"
+                            style="background-image: url('{{asset('images/phc_hiking.jpg') }}');">
                             <div class="container">
-                                <div class="row align-items-center justify-content-between"
+                                <div class="row align-items-center justify-content-between ml-5 mr-5"
                                     style="padding-top:2em; padding-bottom:2em;">
                                     <div class="col-lg-7 col-md-7">
                                         <div class="watch-details mb-40">
-                                            <h2 style="font-size:4em; color:white;">{{__('Third Slide Title')}}</h2>
+                                            <h2 style="font-size:4em; color:white;">{{__('Hiking Trails Of Penang Hill')}}</h2>
                                             <p style="color:white;padding-top:1em; padding-bottom:1em;">
-                                                {{__('Third slide description goes here.')}}
+                                            Discover the stunning hiking trails of Penang Hill, where lush greenery and breathtaking vistas await. These trails offer diverse experiences, from gentle walks through tropical forests to challenging ascents with panoramic views of Penang Island and the mainland.
                                             </p>
-                                            <a href="#" class="btn">{{__('Get Started')}}</a>
+                                            <a href="https://penanghill.gov.my/hikingtrails/" class="btn">{{__('Get Started')}}</a>
                                         </div>
                                     </div>
                                     <div class="col-lg-3 col-md-3 col-sm-10">
+                                        <!--
                                         <div class="choice-watch-img">
                                             <img src="{{ asset('path-to-your-image.png') }}" alt=""
                                                 style="height:100%; width:100%;">
-                                        </div>
+                                        </div>-->
                                     </div>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
+
+
             </div>
             <a class="carousel-control-prev" href="#carouselExampleSlideScale" role="button" data-slide="prev">
                 <span class="carousel-control-prev-icon" aria-hidden="true"></span>
@@ -236,13 +208,6 @@
                             </div>
                         </div>
 
-
-
-                        <!-- <div class="col-lg-3 col-md-3 col-sm-10">
-                        <div class="choice-watch-img">
-                            <img src="{{ asset('zone-asset/img/logo/phc-logo.png') }}" alt="" style="height:100%; width:100%;">
-                        </div>
-                    </div> -->
                     </div>
 
                 </div>

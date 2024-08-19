@@ -6,6 +6,9 @@
 /storage/*.key
 .env
 .env.production
+.env copy
+.env copy 2
+.env cpanel copy
 Homestead.json
 Homestead.yaml
 auth.json

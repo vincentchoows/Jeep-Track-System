@@ -488,7 +488,7 @@
                     <div class="menu-wrapper">
                         <!-- Logo -->
                         <div class="logo">
-                            <a href="{{route('/')}}"><img src="{{asset('/images/phc-logo.png')}}" alt=""></a>
+                            <a href="{{route('/')}}"><img src="{{asset('/images/mountain-logo.jpg')}}" alt=""></a>
                         </div>
                         
                         <!-- Main-menu -->
@@ -576,7 +576,7 @@
                             <div class="single-footer-caption mb-30">
                                 <!-- logo -->
                                 <div class="footer-logo">
-                                    <a href="{{route('/')}}"><img src="{{asset('/images/phc-logo.png')}}" alt=""></a>
+                                    <a href="{{route('/')}}"><img src="{{asset('/images/mountain-logo.jpg')}}" alt=""></a>
                                 </div>
                                 <div class="footer-tittle">
                                     <div class="footer-pera">

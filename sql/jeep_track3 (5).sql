@@ -40,7 +40,7 @@ CREATE TABLE `admin_config` (
 -- Dumping data for table `admin_config`
 --
 
-INSERT INTO `admin_config` (`id`, `name`, `value`, `description`, `created_at`, `updated_at`) VALUES
+INSERT INTO 'admin_config' (`id`, `name`, `value`, `description`, `created_at`, `updated_at`) VALUES
 (2, 'surat_indemnity', 'files/surat_indemnity', NULL, '2024-04-22 03:17:42', '2024-04-22 03:17:42'),
 (3, 'surat_permohonan', 'files/surat_permohonan', NULL, '2024-04-22 03:33:49', '2024-04-22 03:33:49'),
 (4, 'surat_sokongan', 'files/surat_sokongan', NULL, '2024-04-22 03:39:07', '2024-04-22 03:39:07'),
